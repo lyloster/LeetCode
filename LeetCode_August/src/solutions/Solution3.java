@@ -20,17 +20,19 @@ package solutions;
  * */
 public class Solution3 {
     public boolean isPalindrome(String s) {
-        //replaces the replaceAll regex used
-        // String lowerCase = s.toLowerCase();
-        // String processed = "";
-        // for (int j = 0; j < lowerCase.length(); ++j) {
-        //     if (lowerCase.charAt(j) >= 'a' && lowerCase.charAt(j) <= 'z'
-        //           && lowerCase.charAt(j) >= '0' && lowerCase.charAt(j) <= '9') {
-        //         processed += lowerCase.charAt(j);
-        //     }
-        // }
 
-        String processed = s.replaceAll("[^A-Za-z0-9]+", "").toLowerCase();
+        String lowerCase = s.toLowerCase();
+        //StringBuffer runs faster when compiler is not optimized for +=
+        StringBuffer processed = new StringBuffer("");
+        for (int j = 0; j < s.length(); ++j) {
+            if (lowerCase.charAt(j) >= 'a' && lowerCase.charAt(j) <= 'z'
+                    || lowerCase.charAt(j) >= '0' && lowerCase.charAt(j) <= '9') {
+                processed.append(lowerCase.charAt(j));
+            }
+        }
+
+        //String processed = s.replaceAll("[^A-Za-z0-9]+", "").toLowerCase();
+
         for (int i = 0; i < processed.length()/2; ++i) {
             if (processed.charAt(i) != processed.charAt(processed.length() - i - 1)) {
                 return false;
