@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class PivotArr {
-    public int pivotIndex(int[] nums) {
+    public static int pivotIndex(int[] nums) {
         Map <Integer, Pair <Integer, Integer>> sums = new HashMap<>();
         for (int i = 0; i < nums.length; ++i) {
             int indexL = 0;
