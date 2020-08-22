@@ -1,8 +1,5 @@
 package solutions;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * Given an array A of non-negative integers, return an array consisting of all the even elements of A, followed by all the odd elements of A.
  *
@@ -22,27 +19,24 @@ import java.util.List;
  * 1 <= A.length <= 5000
  * 0 <= A[i] <= 5000
  * */
+
 public class Parity {
     public int[] sortArrayByParity(int[] A) {
-        // int[] parity = new int[A.length];
-        List<Integer> even = new ArrayList<>();
-        List<Integer> odd = new ArrayList<>();
+        int[] parity = new int[A.length];
+        int even = 0;
+        int odd = 0;
 
         for (int i = 0; i < A.length; ++i) {
             if (A[i] % 2 == 0) {
-                even.add(A[i]);
+                parity[even] = A[i];
+                ++even;
             } else {
-                odd.add(A[i]);
+                parity[A.length - odd - 1] = A[i];
+                ++odd;
             }
         }
 
-        even.addAll(odd);
-
-        for (int i = 0; i < even.size(); ++i) {
-            //parity[i] = (int)even.get(i);
-            A[i] = (int)even.get(i);
-        }
-
-        return A;
+        return parity;
     }
+
 }
