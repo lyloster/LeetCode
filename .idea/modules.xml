@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/HackerRank_December/HackerRank_December.iml" filepath="$PROJECT_DIR$/HackerRank_December/HackerRank_December.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/LeetCode.iml" filepath="$PROJECT_DIR$/.idea/LeetCode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LeetCode_August/LeetCode_August.iml" filepath="$PROJECT_DIR$/LeetCode_August/LeetCode_August.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LeetCode_October/LeetCode_October.iml" filepath="$PROJECT_DIR$/LeetCode_October/LeetCode_October.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LeetCode_September/LeetCode_September.iml" filepath="$PROJECT_DIR$/LeetCode_September/LeetCode_September.iml" />
+    </modules>
+  </component>
+</project>
